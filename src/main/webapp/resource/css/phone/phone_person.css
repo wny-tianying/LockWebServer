@@ -1,0 +1,171 @@
+.name,.value,.modify_action,.exit_action,.modify_name{
+    background: #fff;
+    border-left: 0px solid rgba(255, 255, 255, 0.3);
+    border-top: 0px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 0px solid rgba(255, 255, 255, 0.3);
+    border-right: 0px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+}
+
+.headerContent{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 20%;
+}
+
+img{
+    width: 6em;
+    height: 6em;
+    position: absolute;
+    top: 20px;
+    left: 40%;
+}
+
+.showUserMessage{
+    position:absolute;
+    height: 65%;
+    width: 100%;
+    float: bottom;
+    bottom: 15%;
+}
+
+.modify_button{
+    position: absolute;
+    height: 15%;
+    width: 100%;
+    bottom: 0;
+}
+
+.userMessage{
+    width: 80%;
+    height: 10%;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.name{
+    position: absolute;
+    width: 20%;
+    height: 80%;
+    top: 10px;
+    left: 20px;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 3%;
+}
+
+.value{
+    position: absolute;
+    width: 70%;
+    height: 80%;
+    top: 10px;
+    left: 30%;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 3%;
+    font-size: 20px;
+}
+
+.back_button{
+    background: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    border-radius: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 18%;
+    left:6%;
+    top: 24%;
+}
+
+.modify_action,.exit_action{
+    background: #fff;
+    border-radius: 15px;
+    width: 25%;
+    height: 30%;
+
+}
+
+.modify_action{
+    position: relative;
+    left: 15%;
+    top: 15%;
+    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+}
+
+.exit_action{
+    position: relative;
+    left: 35%;
+    top: 15%;
+    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+}
+
+.modify_background{
+    background: black;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    display: none;
+}
+
+
+.modify_region{
+    position: absolute;
+    width: 80%;
+    height: 60%;
+    background: radial-gradient(ellipse at left top, #72c7fe, #fafdff);
+    border-radius: 10%;
+    left: 10%;
+    top: 20%;
+}
+
+.ui-icon-cancel{
+    border-radius: 10px;
+    position: absolute;
+    right: 5%;
+    top: 2%;
+}
+
+.detailed_message{
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    top: 10%;
+}
+
+.detailed_message div{
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+.modify_name{
+    position: absolute;
+    width: 20%;
+    height: 80%;
+    top: 10%;
+
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+.detailed_message input{
+    position: relative;
+    margin-left: 30%;
+}
+
+.confirm_modify{
+    position: relative;
+    width: 20%;
+    top: 80%;
+    left: 40%;
+    border-radius: 15px;
+
+}

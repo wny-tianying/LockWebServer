@@ -1,0 +1,209 @@
+.header,.decrease_count,.delete_button,.tips_msg,.increase_count
+,.single_user_setting,.user_setter,.user_button,.locker_button,.history_button
+,.exit_user_setter,.exit_history_setter{
+    background: #fff;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.person{
+    background: rgba(255, 255, 255, 0.3);
+    width: auto;
+    height: 25px;
+    position: absolute;
+    border-radius: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    right: 5%;
+    top: 4%;
+}
+
+.user_manager_block{
+    width: 100%;
+    height: 100%;
+}
+
+.header{
+    position: relative;
+    top: 0px;
+    left: 11%;
+    width: 80%;
+    height: 10%;
+    border-radius: 20px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+    align-content: center;
+}
+
+.first_block{
+    position: absolute;
+    top: 15%;
+    left: 1%;
+    width: 100%;
+    height: 70%;
+}
+
+.decrease_count{
+    position: relative;
+    top: 30%;
+    left: 5%;
+}
+
+.delete_button{
+    position: relative;
+    top: 30%;
+    left: 4%;
+    background: #fff;
+    opacity: 0;
+
+}
+
+
+.tips_msg{
+    position: relative;
+    width: 30%;
+    height: 80%;
+    top: 30%;
+    left: 15%;
+}
+
+
+.increase_count{
+    position: absolute;
+    top: 30%;
+    left: 82%;
+    display: none;
+}
+
+input{
+    position: absolute;
+    right: 2%;
+}
+
+.show_content{
+    width: 100%;
+    height: 90%;
+    float: bottom;
+    overflow: auto;
+}
+
+.single_user_setting{
+    margin-left: 15%;
+    width: 70%;
+    margin-top: 5%;
+    height: 10%;
+    border-radius: 19px;
+}
+
+.content{
+    margin-top: 3%;
+}
+
+.user_name{
+    margin-left: 3%;
+}
+
+.user_setter{
+    margin-left: 4%;
+    margin-right: 9%;
+    float: right;
+}
+
+.action{
+    position: absolute;
+    top: 80%;
+    width: 100%;
+    height: 100%;
+}
+
+.user_button{
+    border-radius: 10px;
+    height: 5%;
+    position: relative;
+    left: 4%;
+    top: 9%;
+    width: 22%;
+
+}
+
+.locker_button{
+    border-radius: 10px;
+    height: 5%;
+    position: relative;
+    left: 13%;
+    top: 9%;
+    width: 22%;
+}
+
+.history_button{
+    border-radius: 10px;
+    height: 5%;
+    position: relative;
+    left: 22%;
+    top: 9%;
+    width: 22%;
+}
+
+.using_history_block{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.lock_manager_block{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.user_tanchuan{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.7;
+}
+
+.user_show_content{
+    background: #fff;
+    position: absolute;
+    width: 70%;
+    height: 58%;
+    left: 15%;
+    top: 20%;
+    border-radius: 24px;
+}
+
+.lock_tanchuan{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.7;
+}
+.lock_show_content,.history_show_content{
+    background: #fff;
+    position: absolute;
+    width: 70%;
+    height: 58%;
+    left: 15%;
+    top: 20%;
+    border-radius: 24px;
+}
+
+.history_tanchuan{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.7;
+}

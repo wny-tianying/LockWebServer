@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <script src="http://wnyeagle.top/LockWebServer/resource/js/jquery-3.5.1.js" type="text/javascript"></script>
+    <script src="http://wnyeagle.top/LockWebServer/resource/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="http://wnyeagle.top/LockWebServer/resource/js/phone/phone_manager.js"></script>
+    <!-- Bootstrap -->
+    <link href="http://wnyeagle.top/LockWebServer/resource/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://wnyeagle.top/LockWebServer/resource/css/phone_manager.css">
+    <link rel="stylesheet" href="http://wnyeagle.top/LockWebServer/resource/css/phone/managerBackground.css">
+
+</head>
+<body>
+
+<!--个人信息图标-->
+<a onclick="skip_to_phone_person()" class="person_message">&nbsp;
+    <span class="glyphicon glyphicon-user" aria-hidden="true">&nbsp;</span>
+</a>
+<div class="use_lock">
+    <div class="order_header">
+        <!--减少预约的标志-->
+        <button onclick="decreaseOrder(this)" hasClick="false" class="decrease_count"><span class="glyphicon glyphicon-minus"></span></button>
+        <button class="delete_button" onclick="deleteOrder()" disabled="disabled">删除</button>
+        <span class="tips_msg">预约</span>
+        <!--增加预约的按钮-->
+        <button onclick="increaseOrder()" class="increase_count"><span class="glyphicon glyphicon-plus"></span></button>
+    </div>
+    <!--展示已经预约的信息-->
+    <div class="showOrderContent">
+    </div>
+
+</div>
+<!--点击该按钮进入操作锁的界面-->
+<button disabled="disabled" class="operate_lock">操作</button>
+<!--进入历史记录-->
+<button class="look_history">历史记录</button>
+
+
+<!--单个锁的设置弹窗的模块-->
+<div class="tanchuan" id="tanchuan">
+    <!--单个锁的内容编辑框-->
+    <div class="singleLockContent">
+        <span class="lockDetailsMessageTitle">详细信息</span><button style="float: right;color: green;background: white;border:none;border-radius: 25px">取消</button>
+        <div class="lockDetailsMessage">
+            <div class="needToFill">
+                <!--在该元素当中使用js进行填充-->
+                <div class="singleLockMessage" >
+                    <div class="singleLockMessageName">锁号</div><div id="lockId" class="singleLockMessageValue"></div>
+                </div>
+                <div class="singleLockMessage" >
+                    <div class="singleLockMessageName">预约时间</div><div id="orderTime" class="singleLockMessageValue"></div>
+                </div>
+                <div class="singleLockMessage" >
+                    <div class="singleLockMessageName">使用时间</div><div id="useTime" class="singleLockMessageValue"></div>
+                </div>
+                <div class="singleLockMessage" >
+                    <div class="singleLockMessageName">锁的状态</div><div id="lockStatus" class="singleLockMessageValue">1</div>
+                </div>
+            </div>
+            <div class="operateInSet">
+                <button type="button" onclick="startToUse(this)"  class="start">开始使用</button>
+                <button type="button" onclick="endToUse(this)" class="end">结束使用</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<!--增加预约锁的弹窗的模块-->
+<div class="order_tanchuan" id="order_tanchuan">
+    <!--单个锁的内容编辑框-->
+    <div class="order_singleLockContent">
+        <span class="order_lockDetailsMessageTitle">选择预约的锁</span>
+        <button style="float: right;color: green;background: white;border:none;border-radius: 25px">取消</button>
+        <div class="order_lockDetailsMessage">
+            <div class="order_needToFill">
+
+            </div>
+            <div class="order_operateInSet">
+                <button type="button"  class="confirm">确认</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>

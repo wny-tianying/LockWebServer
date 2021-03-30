@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+
+    <script src="http://wnyeagle.top/LockWebServer/resource/js/jquery-3.5.1.js" type="text/javascript"></script>
+    <script src="http://wnyeagle.top/LockWebServer/resource/bootstrap/js/bootstrap.min.js"
+            type="text/javascript"></script>
+    <script src="http://wnyeagle.top/LockWebServer/resource/js/phone/administor_manager.js"></script>
+
+    <link rel="stylesheet" href="http://wnyeagle.top/LockWebServer/resource/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://wnyeagle.top/LockWebServer/resource/css/phone/managerBackground.css">
+    <link rel="stylesheet" href="http://wnyeagle.top/LockWebServer/resource/css/phone/administor_manager.css">
+
+</head>
+<body>
+<!--个人信息图标-->
+
+
+<!--<a href="http://wnyeagle.top/LockWebServer/login/loginAfterAction?action=skipToPersonPage" class="person">&nbsp;
+    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+</a>-->
+
+<!--用户的管理-->
+<div class="user_manager_block">
+    <button onclick="skip_to_phone_person()" class="person">&nbsp;
+        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+    </button>
+    <div class="first_block">
+        <div class="header">
+            <!--减少预约的标志-->
+            <button onclick=" decreaseOrder(this)" class="decrease_count"><span
+                    class="glyphicon glyphicon-minus"></span>
+            </button>
+            <button class="delete_button" onclick="deleteOrder('del_user',this)" disabled="disabled">删除</button>
+            <span class="tips_msg">用户管理</span>
+            <!--增加预约的按钮-->
+            <button onclick="choose_all(this)" class="increase_count"><span>全选</span>
+            </button>
+        </div>
+        <!--展示数据库当中的用户-->
+        <div class="show_content" isAllChecked="1">
+            <div class='single_user_setting'>
+                <div class='content' userId=''>
+                    <span class='user_name'>用户名:jack</span>
+                    <button class='user_setter' onclick='set_user_message(this)'>设置</button>
+                </div>
+            </div>
+            <div class="single_user_setting"></div>
+        </div>
+
+    </div>
+    <div class="action">
+        <button class="user_button" disabled="disabled">管理用户</button>
+        <button onclick="skip_lock_manager()" class="locker_button">管理锁</button>
+        <button onclick="skip_history_manager()" class="history_button">历史记录</button>
+    </div>
+</div>
+
+<!--对于锁的管理：添加锁、删除锁等操作-->
+<div class="lock_manager_block">
+    <button onclick="skip_to_phone_person()" class="person">&nbsp;
+        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+    </button>
+    <div class="first_block">
+        <div class="header">
+            <button onclick="decreaseOrder(this)" class="decrease_count"><span class="glyphicon glyphicon-minus"></span>
+            </button>
+            <button class="delete_button" onclick="deleteOrder('del_lock',this)" disabled="disabled">删除</button>
+            <span class="tips_msg">锁的管理</span>
+            <!--增加预约的按钮-->
+            <button onclick="choose_all(this)" class="increase_count"><span>全选</span></button>
+        </div>
+        <!--展示数据库当中的用户-->
+        <div class="show_content" isAllChecked="1">
+            <div class="single_user_setting">
+                <div class="content" id="1">
+                    <span class="user_name">锁序号:jack</span>
+                    <button class="user_setter">设置</button>
+                </div>
+            </div>
+            <div class="single_user_setting"></div>
+        </div>
+
+    </div>
+    <div class="action">
+        <button onclick="skip_user_manager()" class="user_button">管理用户</button>
+        <button class="locker_button" disabled="disabled">管理锁</button>
+        <button onclick="skip_history_manager()" class="history_button">历史记录</button>
+    </div>
+</div>
+
+<!--锁的历史记录的管理-->
+<div class="using_history_block">
+    <button onclick="skip_to_phone_person()" class="person">&nbsp;
+        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+    </button>
+    <div class="first_block">
+        <div class="header">
+            <button onclick="decreaseOrder(this)" class="decrease_count"><span class="glyphicon glyphicon-minus"></span>
+            </button>
+            <button class="delete_button" onclick="deleteOrder('del_history',this)" disabled="disabled">删除</button>
+            <span class="tips_msg">历史管理</span>
+            <!--增加预约的按钮-->
+            <button onclick="choose_all(this)" class="increase_count"><span>全选</span>
+            </button>
+        </div>
+        <!--展示数据库当中的用户-->
+        <div class="show_content" isAllChecked="1">
+            <div class="single_user_setting">
+                <div class="content" userId="1">
+                    <span class="user_name">用户名:jack</span>
+                    <button class="user_setter">设置</button>
+                </div>
+            </div>
+            <div class="single_user_setting"></div>
+        </div>
+
+    </div>
+    <div class="action">
+        <button onclick="skip_user_manager()" class="user_button">管理用户</button>
+        <button onclick="skip_lock_manager()" class="locker_button">管理锁</button>
+        <button class="history_button" disabled="disabled">历史记录</button>
+    </div>
+</div>
+
+<!--用户管理的设置弹窗-->
+<div class="user_tanchuan">
+    <div class="user_show_content">
+        <span style="position: absolute;left: 38%;top:2%;">用户设置</span><button class="exit_user_setter" onclick="exit_user_setter()" style="position: absolute;right: 4%;top: 3%;background: #fff" ><span class="glyphicon glyphicon-remove"></span></button>
+        <div style="position: absolute;top:11%;width:70%;height:50%;left: 14%;" class="user_personal_msg">
+
+        </div>
+        <span style="position: absolute;top: 71%;left: 15%;">权限修改</span>
+        <select style="position: absolute;top: 71%;left: 50%;border-radius: 5px;" id="authority">
+            <option value="user">普通用户</option>
+            <option value="manager">管理员</option>
+        </select>
+
+        <button style="position: absolute;top: 83%;left: 49%;border-radius: 7px;" onclick="ensure_modify()">确认修改</button>
+    </div>
+</div>
+
+<!--锁的管理设置弹窗-->
+<div class="lock_tanchuan">
+    <div class="lock_show_content">
+        <span style="position: absolute;left: 38%;top:2%;">锁的设置</span><button class="exit_user_setter" onclick="exit_lock_setter()" style="position: absolute;right: 4%;top: 3%;background: #fff" ><span class="glyphicon glyphicon-remove"></span></button>
+        <div style="position: absolute;top:11%;width:70%;height:50%;left: 14%;" class="lock_detailed_msg">
+
+        </div>
+        <span style="position: absolute;top: 71%;left: 15%;">锁的可用状态</span>
+        <select style="position: absolute;top: 71%;left: 50%;border-radius: 5px;" id="lockUseFul">
+            <option value="true">可用</option>
+            <option value="false">不可用</option>
+        </select>
+
+        <button style="position: absolute;top: 83%;left: 49%;border-radius: 7px;" onclick="ensure_modify_lock()">确认修改</button>
+    </div>
+</div>
+
+
+<div class="history_tanchuan">
+    <div class="history_show_content">
+        <span style="position: absolute;left: 38%;top:2%;">历史详细信息</span><button class="exit_history_setter" onclick="exit_history_setter()" style="position: absolute;right: 4%;top: 3%;background: #fff" ><span class="glyphicon glyphicon-remove"></span></button>
+
+        <div style="position: absolute;top:11%;width:70%;height:50%;left: 14%;" class="history_detailed_msg">
+
+        </div>
+
+        <button style="position: absolute;left: 30%;top: 86%;" onclick="del_current_dir()">删除当前记录</button>
+    </div>
+</div>
+</body>
+</html>

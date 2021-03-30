@@ -1,0 +1,113 @@
+.order_header,.decrease_count,.tips_msg,.clearAll,.singleHistoryRecord
+,.delete_button{
+    background: #fff;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.person_message{
+    background: rgba(255, 255, 255, 0.3);
+    width: auto;
+    height: 25px;
+    position: absolute;
+    border-radius: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    right: 5%;
+    top: 4%;
+}
+
+.operate_lock{
+    position: absolute;
+    top: 90%;
+    left: 15%;
+    font-size: 15px;
+    height: 30px;
+    width: 100px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.look_history{
+    position: absolute;
+    top: 90%;
+    left: 60%;
+    height: 30px;
+    width: 100px;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.use_lock{
+    top: 15%;
+    left: 1%;
+    width: 100%;
+    height: 70%;
+}
+
+.order_header{
+    position: relative;
+    top: 0px;
+    left: 11%;
+    width: 80%;
+    height: 10%;
+    border-radius: 20px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+    align-content: center;
+}
+
+.decrease_count{
+    position: relative;
+    top: 30%;
+    left: 5%;
+}
+
+.tips_msg{
+    position: relative;
+    width: 30%;
+    height: 80%;
+    top: 30%;
+    left: 15%;
+}
+
+.clearAll{
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    position: relative;
+    top: 30%;
+    left: 35%;
+}
+
+.delete_button{
+    position: relative;
+    top: 30%;
+    left: 4%;
+    background: #fff;
+    opacity: 0;
+}
+
+.showHistoryList{
+    width: 100%;
+    height: 90%;
+    float: bottom;
+    overflow: auto;
+}
+
+.singleHistoryRecord{
+    position: relative;
+    width: 76%;
+    left: 14%;
+    margin-top: 5%;
+    border-radius: 20px;
+}
